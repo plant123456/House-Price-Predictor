@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBD318E2-D191-4FD3-AFFD-4EEFAE4B8225}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NEA</RootNamespace>
+    <AssemblyName>NEA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicObj, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicObj.1.0.1\lib\netstandard2.0\DynamicObj.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.5.0.0\lib\netstandard2.0\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plotly.NET, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Plotly.NET.2.0.0-preview.18\lib\netstandard2.0\Plotly.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAverageIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAverageIncome.Designer.cs">
+      <DependentUpon>AddAverageIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAveragePropertyPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAveragePropertyPrice.Designer.cs">
+      <DependentUpon>AddAveragePropertyPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCrimeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCrimeRate.Designer.cs">
+      <DependentUpon>AddCrimeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddToDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToDatabase.Designer.cs">
+      <DependentUpon>AddToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUnemploymentRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUnemploymentRate.Designer.cs">
+      <DependentUpon>AddUnemploymentRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NEAdatabase1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NEAdatabase1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PredictPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PredictPrice.Designer.cs">
+      <DependentUpon>PredictPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowRelationship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRelationship.Designer.cs">
+      <DependentUpon>ShowRelationship.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAverageIncome.resx">
+      <DependentUpon>AddAverageIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAveragePropertyPrice.resx">
+      <DependentUpon>AddAveragePropertyPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCrimeRate.resx">
+      <DependentUpon>AddCrimeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddToDatabase.resx">
+      <DependentUpon>AddToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUnemploymentRate.resx">
+      <DependentUpon>AddUnemploymentRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredictPrice.resx">
+      <DependentUpon>PredictPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ShowRelationship.resx">
+      <DependentUpon>ShowRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NEAdatabase1DataSet.xsc">
+      <DependentUpon>NEAdatabase1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NEAdatabase1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NEAdatabase1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NEAdatabase1DataSet.xss">
+      <DependentUpon>NEAdatabase1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Plotly\plotly.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
